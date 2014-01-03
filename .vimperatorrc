@@ -1,0 +1,5 @@
+set hintchars=fdsartgbvecwxqyiopmnhzulkj
+set tabnumbers=true
+inoremap <C-a> <Ins><C-a><Ins>
+colorscheme colorname
+set complete=''

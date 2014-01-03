@@ -1,0 +1,11 @@
+IMAGE SIZE
+x: 200
+y: 60
+
+CROP SIZE
+w: 53
+h: 8
+
+CROP BL OFFSETS
+x: 8
+y: 8

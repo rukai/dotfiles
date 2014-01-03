@@ -1,0 +1,56 @@
+#Rubic's basic custom i3 conky
+alignment tl
+cpu_avg_samples 2
+double_buffer yes
+draw_shades no
+use_xft yes
+xftfont terminus:size=9
+gap_x 900
+gap_y 30
+net_avg_samples 1
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+update_interval 1800
+
+#window magic
+own_window yes
+own_window_type override
+own_window_colour 1d1e1d
+
+#borders
+draw_borders yes
+border_width 3
+#default_color 285577
+default_color 5f676a
+
+#colors
+#color0 ffffff #stats
+color0 a8a79c
+#color1 d6f1fe #quote
+color1 8d9786
+
+
+TEXT
+${color0}System:
+  Name:        $nodename
+  Kernel:      $sysname $kernel
+${exec lsb_release -rc | sed 's/^/  /'}
+
+Servers running:
+  ${texeci 7200 curl 2dyume.no-ip.org/running.txt}
+
+Tasks:
+  TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%
+  ${execbar ~/.i3/conky/getTuduPercent.sh}
+  Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
+  ${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
+
+${color1}
+Though it's a dream I can't have, I have a dream.
+Though it's a dream that staggers, I have a dream.
+Though it's a dream that's been abandoned,
+I have a dream,
+Live and die for this dream.
+ - Epik High

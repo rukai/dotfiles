@@ -1,0 +1,198 @@
+grammy-winning band founded in Little Rock, Arkansas, United States in 1995 by singer/pianist Amy Lee and guitarist Ben Moody (who left in 2003).   After recording private albums, the band signed to Wind-up Records and released their first full-length album, Fallen, in 2003, which sold more than 15 million copies worldwide and helped the band win two Grammy Awards. A year later, they released their first live album, Anywhere but Home, which sold more than one million copies worldwide.
+
+        Read more about Evanescence on Last.fm.
+    
+    
+User-contributed text is available under the Creative Commons By-SA License and may also be available under the GNU FDL.]]>
+
+Similar artists:
+
+ * Amy Lee (http://www.last.fm/music/Amy+Lee)
+ * Terry Balsamo (http://www.last.fm/music/We+Are+the+Fallen)
+ * Tim McCord (http://www.last.fm/music/Within+Temptation)
+ * David Hodges (http://www.last.fm/music/Lacuna+Coil)
+ * Ben Moody (http://www.last.fm/music/Tarja)
+ * William Boyd (http://www.last.fm/tag/rock)
+ * John LeCompt (http://www.last.fm/tag/gothic%20rock)
+ * Rocky Gray (http://www.last.fm/tag/female%20vocalists)
+ * Troy McLawhorn (http://www.last.fm/tag/gothic)
+ * Will Hunt (http://www.last.fm/tag/alternative)
+ * Amy Lee (l version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+<artist>
+  <name>Evanescence</name>
+          <mbid>f4a31f0a-51dd-4fa7-986d-3095c40c5ed9</mbid>
+            <bandmembers>
+                    <member>
+                <name>Amy Lee</name>
+                                    <yearfrom>1995</yearfrom>
+                                            </member>
+                    <member>
+                <name>Terry Balsamo</name>
+                                    <yearfrom>2003</yearfrom>
+                                            </member>
+                    <member>
+                <name>Tim McCord</name>
+                                    <yearfrom>2006</yearfrom>
+                                            </member>
+                    <member>
+                <name>David Hodges</name>
+                                    <yearfrom>1999</yearfrom>
+                                                    <yearto>2002</yearto>
+                            </member>
+                    <member>
+                <name>Ben Moody</name>
+                                    <yearfrom>1995</yearfrom>
+                                                    <yearto>2003</yearto>
+                            </member>
+                    <member>
+                <name>William Boyd</name>
+                                    <yearfrom>2003</yearfrom>
+                                                    <yearto>2006</yearto>
+                            </member>
+                    <member>
+                <name>John LeCompt</name>
+                                    <yearfrom>2002</yearfrom>
+                                                    <yearto>2007</yearto>
+                            </member>
+                    <member>
+                <name>Rocky Gray</name>
+                                    <yearfrom>2002</yearfrom>
+                                                    <yearto>2007</yearto>
+                            </member>
+                    <member>
+                <name>Troy McLawhorn</name>
+                                    <yearfrom>2007</yearfrom>
+                                            </member>
+                    <member>
+                <name>Will Hunt</name>
+                                    <yearfrom>2007</yearfrom>
+                                            </member>
+            </bandmembers>
+        <url>http://www.last.fm/music/Evanescence</url>
+  <image size="small">http://userserve-ak.last.fm/serve/34/7583903.jpg</image>
+  <image size="medium">http://userserve-ak.last.fm/serve/64/7583903.jpg</image>
+  <image size="large">http://userserve-ak.last.fm/serve/126/7583903.jpg</image>
+  <image size="extralarge">http://userserve-ak.last.fm/serve/252/7583903.jpg</image>
+  <image size="mega">http://userserve-ak.last.fm/serve/500/7583903/Evanescence+057.jpg</image>
+  <streamable>0</streamable>
+  <ontour>0</ontour>
+  <stats>
+    <listeners>2170515</listeners>
+    <playcount>93693540</playcount>
+      </stats>
+
+  <similar>
+	    <artist>
+	  <name>Amy Lee</name>
+	  <url>http://www.last.fm/music/Amy+Lee</url>
+	  <image size="small">http://userserve-ak.last.fm/serve/34/40435879.png</image>
+	  <image size="medium">http://userserve-ak.last.fm/serve/64/40435879.png</image>
+	  <image size="large">http://userserve-ak.last.fm/serve/126/40435879.png</image>
+	  <image size="extralarge">http://userserve-ak.last.fm/serve/252/40435879.png</image>
+	  <image size="mega">http://userserve-ak.last.fm/serve/500/40435879/Amy+Lee++667++667+PNG.png</image>
+	  
+	        	</artist>
+    <artist>
+	  <name>We Are the Fallen</name>
+	  <url>http://www.last.fm/music/We+Are+the+Fallen</url>
+	  <image size="small">http://userserve-ak.last.fm/serve/34/63749389.png</image>
+	  <image size="medium">http://userserve-ak.last.fm/serve/64/63749389.png</image>
+	  <image size="large">http://userserve-ak.last.fm/serve/126/63749389.png</image>
+	  <image size="extralarge">http://userserve-ak.last.fm/serve/252/63749389.png</image>
+	  <image size="mega">http://userserve-ak.last.fm/serve/500/63749389/We+Are+the+Fallen++620x470+PNG.png</image>
+	  
+	        	</artist>
+    <artist>
+	  <name>Within Temptation</name>
+	  <url>http://www.last.fm/music/Within+Temptation</url>
+	  <image size="small">http://userserve-ak.last.fm/serve/34/96332925.png</image>
+	  <image size="medium">http://userserve-ak.last.fm/serve/64/96332925.png</image>
+	  <image size="large">http://userserve-ak.last.fm/serve/126/96332925.png</image>
+	  <image size="extralarge">http://userserve-ak.last.fm/serve/252/96332925.png</image>
+	  <image size="mega">http://userserve-ak.last.fm/serve/_/96332925/Within+Temptation+HYDRA++PNG.png</image>
+	  
+	        	</artist>
+    <artist>
+	  <name>Lacuna Coil</name>
+	  <url>http://www.last.fm/music/Lacuna+Coil</url>
+	  <image size="small">http://userserve-ak.last.fm/serve/34/96081857.png</image>
+	  <image size="medium">http://userserve-ak.last.fm/serve/64/96081857.png</image>
+	  <image size="large">http://userserve-ak.last.fm/serve/126/96081857.png</image>
+	  <image size="extralarge">http://userserve-ak.last.fm/serve/252/96081857.png</image>
+	  <image size="mega">http://userserve-ak.last.fm/serve/_/96081857/Lacuna+Coil+BROKEN+CROWN+HALO.png</image>
+	  
+	        	</artist>
+    <artist>
+	  <name>Tarja</name>
+	  <url>http://www.last.fm/music/Tarja</url>
+	  <image size="small">http://userserve-ak.last.fm/serve/34/70893024.png</image>
+	  <image size="medium">http://userserve-ak.last.fm/serve/64/70893024.png</image>
+	  <image size="large">http://userserve-ak.last.fm/serve/126/70893024.png</image>
+	  <image size="extralarge">http://userserve-ak.last.fm/serve/252/70893024.png</image>
+	  <image size="mega">http://userserve-ak.last.fm/serve/_/70893024/Tarja+TH+PNGHQ.png</image>
+	  
+	        	</artist>
+  </similar>
+    <tags>
+        <tag>
+	  <name>rock</name>
+	  <url>http://www.last.fm/tag/rock</url>
+	</tag>
+        <tag>
+	  <name>gothic rock</name>
+	  <url>http://www.last.fm/tag/gothic%20rock</url>
+	</tag>
+        <tag>
+	  <name>female vocalists</name>
+	  <url>http://www.last.fm/tag/female%20vocalists</url>
+	</tag>
+        <tag>
+	  <name>gothic</name>
+	  <url>http://www.last.fm/tag/gothic</url>
+	</tag>
+        <tag>
+	  <name>alternative</name>
+	  <url>http://www.last.fm/tag/alternative</url>
+	</tag>
+      </tags>
+      <bio>
+        <links>
+        <link rel="original" href="http://www.last.fm/music/Evanescence/+wiki" />
+    </links>
+                                    <published>Sat, 11 May 2013 22:48:16 +0000</published>
+    <summary>
+        <![CDATA[        Evanescence is a <a href="http://www.last.fm/tag/grammy" class="bbcode_tag" rel="tag">grammy</a>-winning band founded in Little Rock, Arkansas, United States in 1995 by singer/pianist <a href="http://www.last.fm/music/Amy+Lee" class="bbcode_artist">Amy Lee</a> and guitarist <a href="http://www.last.fm/music/Ben+Moody" class="bbcode_artist">Ben Moody</a> (who left in 2003).   After recording private albums, the band signed to Wind-up Records and released their first full-length album, <a title="Evanescence - Fallen" href="http://www.last.fm/music/Evanescence/Fallen" class="bbcode_album">Fallen</a>, in 2003, which sold more than 15 million copies worldwide and helped the band win two Grammy Awards. A year later, they released their first live album, <a title="Evanescence - Anywhere but Home" href="http://www.last.fm/music/Evanescence/Anywhere+but+Home" class="bbcode_album">Anywhere but Home</a>, which sold more than one million copies worldwide.
+
+        <a href="http://www.last.fm/music/Evanescence">Read more about Evanescence on Last.fm</a>.
+    ]]>
+    </summary>
+    <content>
+            <![CDATA[        Evanescence is a <a href="http://www.last.fm/tag/grammy" class="bbcode_tag" rel="tag">grammy</a>-winning band founded in Little Rock, Arkansas, United States in 1995 by singer/pianist <a href="http://www.last.fm/music/Amy+Lee" class="bbcode_artist">Amy Lee</a> and guitarist <a href="http://www.last.fm/music/Ben+Moody" class="bbcode_artist">Ben Moody</a> (who left in 2003).   After recording private albums, the band signed to Wind-up Records and released their first full-length album, <a title="Evanescence - Fallen" href="http://www.last.fm/music/Evanescence/Fallen" class="bbcode_album">Fallen</a>, in 2003, which sold more than 15 million copies worldwide and helped the band win two Grammy Awards. A year later, they released their first live album, <a title="Evanescence - Anywhere but Home" href="http://www.last.fm/music/Evanescence/Anywhere+but+Home" class="bbcode_album">Anywhere but Home</a>, which sold more than one million copies worldwide.
+
+        <a href="http://www.last.fm/music/Evanescence">Read more about Evanescence on Last.fm</a>.
+    
+    
+User-contributed text is available under the Creative Commons By-SA License and may also be available under the GNU FDL.]]>
+    </content>
+            <placeformed>Little Rock, Arkansas, United States</placeformed>                        <yearformed>1995</yearformed>
+            <formationlist>
+                    <formation>
+                <yearfrom>1995</yearfrom>
+                <yearto></yearto>
+            </formation>
+            </formationlist>
+      </bio>
+  </artist></lfm>
+)
+ * We Are the Fallen (http://www.last.fm/music/Evanescence)
+ * Within Temptation (http://www.last.fm/music/Amy+Lee)
+ * Lacuna Coil (http://www.last.fm/music/We+Are+the+Fallen)
+ * Tarja (http://www.last.fm/music/Within+Temptation)
+ * rock (http://www.last.fm/music/Lacuna+Coil)
+ * gothic rock (http://www.last.fm/music/Tarja)
+ * female vocalists (http://www.last.fm/tag/rock)
+ * gothic (http://www.last.fm/tag/gothic%20rock)
+ * alternative (http://www.last.fm/tag/female%20vocalists)
+
+http://www.last.fm/music/Evanescence

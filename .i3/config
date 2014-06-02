@@ -140,6 +140,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     status_command i3status | ~/.i3/i3bar/wrapper.py
+    #status_command conky -c /home/rubic/.i3/i3bar/conky.rc
     output DP1
     colors { # dark colors
         background #080808
@@ -195,9 +196,11 @@ bindsym $mod+Tab exec xsel | xvkbd -xsendevent -file - 2> /dev/null
 #remove newlines from text in the clipboard
 bindsym $mod+y exec ./Scripts/clipboardRemoveNewline.sh
 
-#timetable
+#tudu
 bindsym $mod+t exec urxvtcd -e tudu
-bindsym $mod+Shift+t exec zathura /home/rubic/Education/School/year11/timetable.pdf
+
+#timetable
+bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetable.jpg
 
 #ranger
 bindsym $mod+Shift+Return exec urxvtcd -e ranger
@@ -207,11 +210,11 @@ bindsym Print exec scrot /home/rubic/Pictures/screenshot.png
 bindsym $mod+Print exec --no-startup-id sleep 0.2s && xmag -mag 1
 
 #screen lock
-bindsym $mod+grave exec i3lock -c 000000 -i /home/rubic/Pictures/Wallpapers/stripedTile.png -d -t
+bindsym $mod+grave exec i3lock -c 000000 -i /home/rubic/Pictures/Wallpapers/minimal/stripedTile.png -d -t
 #bindsym $mod+grave exec i3lock -c 000000 -i /home/rubic/Pictures/Wallpapers/orionNebulaBetterRes.jpg -d
 
 #cmus startup
-bindsym $mod+u exec urxvtcd -e cmus
+bindsym $mod+u exec urxvtcd -e ncmpcpp
 
 #pianobar (pandora startup)
 bindsym $mod+Shift+u exec urxvtcd -e pianobar
@@ -231,9 +234,10 @@ bindsym $mod+Shift+C exec urxvtcd -e vim /home/rubic/.i3/config
 #web browsing
 bindsym $mod+i exec firefox
 bindsym $mod+Shift+I exec start-tor-browser
+bindsym $mod+Shift+O exec dmenu #dummy
 
 #libreoffice
-bindsym $mod+o exec libreoffice
+bindsym $mod+o exec keepassx
 
 #volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
@@ -246,19 +250,18 @@ bindsym XF86AudioMute exec /home/rubic/Scripts/whitenoiseToggle.sh
 #move container to the chosen screen
 bindsym $mod+m move container to output right
 
-#media keys for cmus
-bindsym XF86AudioPlay exec cmus-remote -u
-bindsym XF86AudioPrev exec cmus-remote -r
-bindsym XF86AudioNext exec cmus-remote -n
+##media keys for cmus
+#bindsym XF86AudioPlay exec cmus-remote -u
+#bindsym XF86AudioPrev exec cmus-remote -r
+#bindsym XF86AudioNext exec cmus-remote -n
+
+#media keys for ncmpcpp
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioNext exec mpc next
 
 #toggles workspace screen
 bindsym $mod+Shift+X move workspace to output right
-
-#conky
-exec_always --no-startup-id killall conky; conky -dc /home/rubic/.i3/conky/rc
-
-#wallpaper
-exec_always --no-startup-id /home/rubic/Scripts/wallpaper.sh
 
 #set backlight brightness
 exec --no-startup-id xbacklight -set 13%
@@ -267,7 +270,7 @@ exec --no-startup-id xbacklight -set 13%
 exec_always --no-startup-id unclutter -keystroke -idle 0.5 -root --noevents
 
 #general bash script
-exec --no-startup-id /home/rubic/Scripts/i3Init.sh
+exec --no-startup-id /home/rubic/Scripts/config/i3Init.sh
 
 #steam window regex hack
 for_window [class="Steam"] floating enable
@@ -282,3 +285,13 @@ for_window [title="Unlock\ Login\ Keyring"] floating disable
 client.focused #000000 #7d8876 #ffffff #b0a974
 
 hide_edge_borders both
+
+# Scratchpad tests
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+#launch applications that need to run after a network connection is made
+exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
+
+exec --no-startup-id redshift 

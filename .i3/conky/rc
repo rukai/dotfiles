@@ -6,7 +6,7 @@ draw_shades no
 use_xft yes
 xftfont terminus:size=9
 gap_x 900
-gap_y 30
+gap_y 100
 net_avg_samples 1
 no_buffers yes
 out_to_console no
@@ -31,6 +31,10 @@ color0 a8a79c
 #color1 d6f1fe #quote
 color1 8d9786
 
+#TRANSPARENCY DISABLE ON CHANGE WALLPAPER
+own_window_transparent yes
+draw_borders no
+
 
 TEXT
 ${color0}System:
@@ -38,8 +42,14 @@ ${color0}System:
   Kernel:      $sysname $kernel
 ${exec lsb_release -rc | sed 's/^/  /'}
 
-Servers running:
-  ${texeci 7200 curl 2dyume.no-ip.org/running.txt}
+#TO THE MOON:
+#  So USD: ${texeci 7200 curl "https://dogeapi.com/wow/?a=get_current_price&convert_to=USD&amount_doge=1"}
+#  Such Difficulty: ${texeci 7200 curl "https://dogeapi.com/wow/?a=get_difficulty"}
+#  Wow, Current Block: ${texeci 7200 curl "https://dogeapi.com/wow/?a=get_current_block"}
+#
+#Servers running:
+#  ${texeci 7200 curl 192.168.1.7/running.txt}
+#  ${texeci 7200 curl 192.168.1.9/running.txt}
 
 Tasks:
   TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%

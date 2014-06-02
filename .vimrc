@@ -12,3 +12,6 @@ set clipboard=unnamed
 "set textwidth=100
 "set formatoptions+=a
 
+set sh=bash
+
+inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>

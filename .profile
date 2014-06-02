@@ -24,10 +24,19 @@ fi
 #Custom modifications
 
 #capslock magic
-./Scripts/escCapslockSwitch.sh
+./Scripts/config/escCapslockSwitch.sh
 
 #ranger gnome terminal hack to fix application launching
 export TERMINAL=urxvt
 export SHELL=/usr/bin/fish
 export TERMCMD=urxvt
 export PAGER=less
+
+#gitdoge
+
+alias such=git
+alias much=git
+alias many=git
+alias very=git
+alias so=git
+alias wow='git status'

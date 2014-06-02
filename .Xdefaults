@@ -22,27 +22,62 @@ urxvt*geometry: 60x33
 urxvt*font:xft:terminus:size=7
 urxvt*boldFont:xft:terminus:size=7
 
-!*foreground: #88877C
-*foreground: #b8b7AC
-!*background: #1D1E1D
-*background: #181918
+!!*foreground: #88877C
+!*foreground: #b8b7AC
+!!*background: #1D1E1D
+!*background: #181918
+!
+!*color0: #252525
+!*color8: #383838
+!*color1: #b4543f
+!*color9: #d38773
+!*color2: #7d8941
+!*color10: #b0a974
+!*color3: #b2893f
+!*color11: #d2a973
+!*color4: #7e5276
+!*color12: #b18695
+!*color5: #b45274
+!*color13: #d38694
+!*color6: #7d8876
+!*color14: #b0a795
+!*color7: #A89B8A
+!*color15: #BAA48A
 
-*color0: #252525
-*color8: #383838
-*color1: #b4543f
-*color9: #d38773
-*color2: #7d8941
-*color10: #b0a974
-*color3: #b2893f
-*color11: #d2a973
-*color4: #7e5276
-*color12: #b18695
-*color5: #b45274
-*color13: #d38694
-*color6: #7d8876
-*color14: #b0a795
-*color7: #A89B8A
-*color15: #BAA48A
+! vim: set filetype=xdefaults :
+*foreground: #D7D0C7
+*background: #151515
+! !black
+! *color0:     #AF875F
+! *color8:     #AF875F
+*color0:     #101010
+*color8:     #404040
+! !red
+*color1:     #E84F4F
+*color9:     #D23D3D
+! !green
+*color2:     #B8D68C
+*color10:    #A0CF5D
+! !yellow
+*color3:     #E1AA5D
+*color11:    #F39D21
+! !blue
+*color4:     #7DC1CF
+*color12:    #4E9FB1
+! !magenta
+*color5:     #9B64FB
+*color13:    #8542FF
+! !cyan
+*color6:     #6D878D
+*color14:    #42717B
+! !white
+*color7:     #dddddd
+*color15:    #dddddd
+
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+URxvt*cursorColor:        #ff8939
+URxvt*cursorColor2:       #151515
 
 *utf8:  1
 

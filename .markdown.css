@@ -265,6 +265,19 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-table, th, td {
-border: 1px solid #A8A79C;
+
+th {
+	font-size: 14px;
+	font-weight: normal;
+	color: #D8D7CC;
+	padding: 10px 8px;
+	border-bottom: 2px solid #A8A79C;
+}
+
+td {
+	padding: 9px 8px 0px 8px;
+}
+
+body tr:hover td {
+	color: #D8D7CC;
 }

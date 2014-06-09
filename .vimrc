@@ -15,3 +15,5 @@ set clipboard=unnamed
 set sh=bash
 
 inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
+
+set number

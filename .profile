@@ -26,10 +26,10 @@ fi
 #capslock magic
 ./Scripts/config/escCapslockSwitch.sh
 
-#ranger gnome terminal hack to fix application launching
-export TERMINAL=urxvt
+#Set ranger terminal information
+export TERMINAL=urxvtc
 export SHELL=/usr/bin/fish
-export TERMCMD=urxvt
+export TERMCMD=urxvtc
 export PAGER=less
 
 #gitdoge

@@ -17,3 +17,5 @@ set sh=bash
 inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 
 set number
+set scrolloff=5
+hi SpellBad guibg=#ff2929 ctermbg=88

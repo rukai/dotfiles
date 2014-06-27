@@ -29,11 +29,6 @@ import subprocess
 import json
 import re
 
-def get_governor():
-    """ Get the current governor for cpu0, assuming all CPUs use the same. """
-    with open('/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor') as fp:
-        return fp.readlines()[0].strip()
-
 def print_line(message):
     """ Non-buffered printing to stdout. """
     sys.stdout.write(message + '\n')
@@ -52,6 +47,63 @@ def read_line():
     except KeyboardInterrupt:
         sys.exit()
 
+def cmus():
+    #get music info from cmus
+    musicInfo = 'M: '
+    fileName = ''
+    artist = ''
+    title = ''
+    
+    try:
+        rawInfo = str(subprocess.check_output(['cmus-remote', '-Q']))
+    except:
+        rawInfo = ''
+    if rawInfo:
+        for line in rawInfo.split('\n'):
+            fileGroup = re.search(r'^file (.*?)$', line)
+            if fileGroup:
+                location = fileGroup.group(1)
+                fileName = re.search(r'^/(?:.*?/)*(.*)\..*$', location).group(1)
+            elif line.startswith('tag title'):
+                title = line[10:]
+            elif line.startswith('tag artist'):
+                artist = line[11:]
+
+        #organise into final string
+        if title or fileName:
+            if artist:
+                musicInfo += artist+' - '
+            musicInfo += title if title else fileName
+        else:
+            musicInfo += 'inactive'
+    else:
+        musicInfo = ''
+    return musicInfo
+
+def mpd():
+    #get music info from cmus
+    musicString = 'M: '
+    info = {'file':'', 'artist':'', 'title':''}
+    
+    #get data from via mpc
+    try:
+        for attribute in info.keys():
+            info[attribute] = str(subprocess.check_output(['mpc', '-f', '%{}%'.format(attribute), 'current'])).strip()
+    except subprocess.CalledProcessError:
+        return ''
+
+    #organise into final string
+    if info['file']:
+        fileRe = re.search(r'^(?:.*?/)*(.*)\..*$', info['file']) #grab filename from relative filepath
+        if fileRe:
+            info['file'] = fileRe.group(1)
+        if info['artist']:
+            musicString += info['artist'] + ' - '
+        musicString += info['title'] if info['title'] else info['file']
+    else:
+        musicString += 'Inactive'
+    return musicString
+
 if __name__ == '__main__':
     # Skip the first line which contains the version header.
     print_line(read_line())
@@ -67,43 +119,13 @@ if __name__ == '__main__':
 
         j = json.loads(line)
         # insert information into the start of the json, but could be anywhere
-        # CHANGE THIS LINE TO INSERT SOMETHING ELSE
-        #j.insert(0, {'full_text' : '%s' % get_governor(), 'name' : 'gov'})
-
-        #get music info from cmus
-        musicInfo = 'M: '
-        fileName = ''
-        artist = ''
-        title = ''
         
-        try:
-            rawInfo = str(subprocess.check_output(['cmus-remote', '-Q']))
-        except:
-            rawInfo = ''
-        if rawInfo:
-            for line in rawInfo.split('\n'):
-                fileGroup = re.search(r'^file (.*?)$', line)
-                if fileGroup:
-                    location = fileGroup.group(1)
-                    fileName = re.search(r'^/(?:.*?/)*(.*)\..*$', location).group(1)
-                elif line.startswith('tag title'):
-                    title = line[10:]
-                elif line.startswith('tag artist'):
-                    artist = line[11:]
-
-            #organise into final string
-            if title or fileName:
-                if artist:
-                    musicInfo += artist+' - '
-                musicInfo += title if title else fileName
-            else:
-                musicInfo += 'inactive'
-        else:
-            musicInfo += 'cmus not running'
+        musicString = mpd()
 
         #add to json structure
-        if 'cmus not running' not in musicInfo:
-            j.insert(0, {'full_text' : musicInfo, 'name' : 'music'})
+        if musicString:
+            j.insert(0, {'full_text' : musicString, 'name' : 'music'})
 
         # and echo back new encoded json
         print_line(prefix+json.dumps(j))
+

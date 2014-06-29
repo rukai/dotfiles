@@ -6,7 +6,7 @@ draw_shades no
 use_xft yes
 xftfont terminus:size=9
 gap_x 900
-gap_y 30
+gap_y 100
 net_avg_samples 1
 no_buffers yes
 out_to_console no
@@ -26,22 +26,19 @@ border_width 3
 default_color 5f676a
 
 #colors
-#color0 ffffff #stats
-color0 a8a79c
-#color1 d6f1fe #quote
-color1 8d9786
+color0 a8a79c #system
+color1 8d9786 #quote
+color2 a6c1ce #agenda
 
 #TRANSPARENCY DISABLE ON CHANGE WALLPAPER
 own_window_transparent yes
 draw_borders no
-
 
 TEXT
 ${color0}System:
   Name:        $nodename
   Kernel:      $sysname $kernel
 ${exec lsb_release -rc | sed 's/^/  /'}
-
 #TO THE MOON:
 #  So USD: ${texeci 7200 curl "https://dogeapi.com/wow/?a=get_current_price&convert_to=USD&amount_doge=1"}
 #  Such Difficulty: ${texeci 7200 curl "https://dogeapi.com/wow/?a=get_difficulty"}
@@ -51,16 +48,13 @@ ${exec lsb_release -rc | sed 's/^/  /'}
 #  ${texeci 7200 curl 192.168.1.7/running.txt}
 #  ${texeci 7200 curl 192.168.1.9/running.txt}
 
-Agenda:
-  ${exec gcalcli --nocolor agenda}
-  #TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%
-  #${execbar ~/.i3/conky/getTuduPercent.sh}
-
-  #Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
-  #${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
-
-${color1}
-Though it's a dream I can't have, I have a dream.
+${color2}Agenda:
+${exec gcalcli --nocolor agenda}
+# #TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%
+# #${execbar ~/.i3/conky/getTuduPercent.sh}
+# #Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
+# #${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
+${color1}Though it's a dream I can't have, I have a dream.
 Though it's a dream that staggers, I have a dream.
 Though it's a dream that's been abandoned,
 I have a dream,

@@ -106,7 +106,7 @@ bindsym $mod+Shift+parenright move container to workspace 10
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'Really exit?' -b 'yes, exit' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -188,13 +188,7 @@ workspace 7 output LVDS1
 workspace 6 output LVDS1
 
 #click
-bindsym $mod+Shift+Tab exec xdotool click 1
-
-#past primary selection
-bindsym $mod+Tab exec xsel | xvkbd -xsendevent -file - 2> /dev/null
-
-#remove newlines from text in the clipboard
-bindsym $mod+y exec ./Scripts/clipboardRemoveNewline.sh
+bindsym $mod+Tab exec xdotool click 1
 
 #tudu
 bindsym $mod+t exec urxvtcd -e tudu
@@ -260,6 +254,10 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioNext exec mpc next
 
+bindsym Shift+XF86AudioPlay exec mpc seek 00:00:00
+bindsym Shift+XF86AudioPrev exec mpc seek -00:00:10
+bindsym Shift+XF86AudioNext exec mpc seek +00:00:10
+
 #toggles workspace screen
 bindsym $mod+Shift+X move workspace to output right
 
@@ -294,4 +292,5 @@ bindsym $mod+minus scratchpad show
 #launch applications that need to run after a network connection is made
 exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
 
+# Redshift
 exec --no-startup-id redshift 

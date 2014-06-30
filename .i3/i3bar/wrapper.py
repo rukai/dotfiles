@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # This script is a simple wrapper which prefixes each i3status line with custom
@@ -88,7 +88,7 @@ def mpd():
     #get data from via mpc
     try:
         for attribute in info.keys():
-            info[attribute] = str(subprocess.check_output(['mpc', '-f', '%{}%'.format(attribute), 'current'])).strip()
+            info[attribute] = subprocess.check_output(['mpc', '-f', '%{}%'.format(attribute), 'current']).decode().strip()
     except subprocess.CalledProcessError:
         return ''
 

@@ -21,7 +21,7 @@ font xft:Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtcd -e fish
+bindsym $mod+Return exec urxvtcd
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -141,7 +141,7 @@ bar {
     position top
     status_command i3status | ~/.i3/i3bar/wrapper.py
     #status_command conky -c /home/rubic/.i3/i3bar/conky.rc
-    output DP1
+    output VGA-0
     colors { # dark colors
         background #080808
         background #141514
@@ -157,35 +157,34 @@ bar {
 #       focused_workspace #cccccc #cccccc #000000
 #       inactive_workspace #cccccc #cccccc #777777
 #       urgent_workspace #cccccc #cccccc #ff1010
-
-#   }
+#}
 }
 
-bar {
-    position bottom
-    output LVDS1
-    colors {
-        background #080808
-        background #141514
-        #workspaceIcon    #border #background #text 
-        focused_workspace #b18695 #7e5276 #ffffff
-    }
-}
+#bar {
+#    position bottom
+#    output LVDS1
+#    colors {
+#        background #080808
+#        background #141514
+#        #workspaceIcon    #border #background #text 
+#        focused_workspace #b18695 #7e5276 #ffffff
+#    }
+#}
 
 
 #Custom modifications
 workspace_auto_back_and_forth yes
-workspace "1: Web" output DP1
-workspace 2 output DP1
-workspace 3 output DP1
-workspace 4 output DP1
-workspace 5 output DP1
+workspace "1: Web" output VGA-0
+workspace 2 output VGA-0
+workspace 3 output VGA-0
+workspace 4 output VGA-0
+workspace 5 output VGA-0
 
-workspace 10 output LVDS1
-workspace 9  output LVDS1
-workspace 8 output LVDS1
-workspace 7 output LVDS1
-workspace 6 output LVDS1
+workspace 10 output VGA-0
+workspace 9 output VGA-0
+workspace 8 output VGA-0
+workspace 7 output VGA-0
+workspace 6 output VGA-0
 
 #click
 bindsym $mod+Tab exec xdotool click 1
@@ -261,9 +260,6 @@ bindsym Shift+XF86AudioNext exec mpc seek +00:00:10
 #toggles workspace screen
 bindsym $mod+Shift+X move workspace to output right
 
-#set backlight brightness
-exec --no-startup-id xbacklight -set 13%
-
 #startup unclutter
 exec_always --no-startup-id unclutter -keystroke -idle 0.5 -root --noevents
 
@@ -289,8 +285,12 @@ hide_edge_borders both
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+exec --no-startup-id /home/rubic/Scripts/config/escCapslockSwitch.sh
 #launch applications that need to run after a network connection is made
 exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
 
 # Redshift
 exec --no-startup-id redshift 
+
+# Optionally configure laptop
+exec /home/rubic/Scripts/config/laptop.sh

@@ -28,9 +28,10 @@ fi
 
 #Set ranger terminal information
 export TERMINAL=urxvtc
-export SHELL=/usr/bin/fish
+export SHELL=/bin/bash
 export TERMCMD=urxvtc
 export PAGER=less
+export EDITOR=vim
 
 #gitdoge
 

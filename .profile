@@ -23,9 +23,6 @@ fi
 
 #Custom modifications
 
-#capslock magic
-./Scripts/config/escCapslockSwitch.sh
-
 #Set ranger terminal information
 export TERMINAL=urxvtc
 export SHELL=/bin/bash

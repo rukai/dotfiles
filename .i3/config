@@ -21,7 +21,7 @@ font xft:Terminus 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtcd
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -227,18 +227,25 @@ bindsym $mod+Shift+C exec urxvtcd -e vim /home/rubic/.i3/config
 #web browsing
 bindsym $mod+i exec firefox
 bindsym $mod+Shift+I exec start-tor-browser
-bindsym $mod+Shift+O exec dmenu #dummy
 
 #libreoffice
 bindsym $mod+o exec keepassx
 
-#volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#volume alsa
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 #bindsym XF86AudioMute exec /home/rubic/Scripts/Hacks/muteToggle.sh
 
+#volume pulse
+bindsym XF86AudioRaiseVolume exec ponymix increase 1
+bindsym XF86AudioLowerVolume exec ponymix decrease 1
+bindsym XF86AudioMute exec ponymix toggle
+
+#launch volume GUI
+bindsym $mod+p exec pavucontrol
+
 #whitenoise
-bindsym XF86AudioMute exec /home/rubic/Scripts/whitenoiseToggle.sh 
+#bindsym XF86AudioMute exec /home/rubic/Scripts/whitenoiseToggle.sh 
 
 #move container to the chosen screen
 bindsym $mod+m move container to output right
@@ -263,15 +270,15 @@ bindsym $mod+Shift+X move workspace to output right
 #startup unclutter
 exec_always --no-startup-id unclutter -keystroke -idle 0.5 -root --noevents
 
-#general bash script
+#general startup via bash
 exec --no-startup-id /home/rubic/Scripts/config/i3Init.sh
 
-#steam window regex hack
+#steam window floating
 for_window [class="Steam"] floating enable
 for_window [class="Steam" title="^Steam$"] floating disable
 for_window [class="Steam" title="^Friends$"] floating disable
 
-#misc window regex hack
+#misc window floating
 for_window [title="Unlock\ Login\ Keyring"] floating disable
 
 #COLORS!!

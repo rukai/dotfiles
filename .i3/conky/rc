@@ -13,6 +13,7 @@ out_to_console no
 out_to_stderr no
 extra_newline no
 update_interval 1800
+own_window_transparent no
 
 #window magic
 own_window yes
@@ -30,9 +31,9 @@ color0 a8a79c #system
 color1 8d9786 #quote
 color2 a6c1ce #agenda
 
-#TRANSPARENCY DISABLE ON CHANGE WALLPAPER
-own_window_transparent yes
-draw_borders no
+#Enable on simple wallpapers
+#own_window_transparent yes
+#draw_borders no
 
 TEXT
 ${color0}System:
@@ -47,16 +48,12 @@ ${exec lsb_release -rc | sed 's/^/  /'}
 #Servers running:
 #  ${texeci 7200 curl 192.168.1.7/running.txt}
 #  ${texeci 7200 curl 192.168.1.9/running.txt}
-
 ${color2}Agenda:
-${exec gcalcli --nocolor agenda}
-# #TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%
-# #${execbar ~/.i3/conky/getTuduPercent.sh}
+${exec gcalcli --nocolor agenda "1am" "11pm" | sed 's/^/  /'}
+TuDu List:
+  ${exec ~/.i3/conky/getTuduPercent.sh}%  ${execbar ~/.i3/conky/getTuduPercent.sh}
 # #Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
 # #${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
-${color1}Though it's a dream I can't have, I have a dream.
-Though it's a dream that staggers, I have a dream.
-Though it's a dream that's been abandoned,
-I have a dream,
-Live and die for this dream.
- - Epik High
+
+'most bugs come down to setting or resetting a single bit'
+ TJ- the MBR hacker

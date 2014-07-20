@@ -21,22 +21,13 @@ if [ -d "$HOME/Bin" ] ; then
     PATH="$HOME/Bin:$PATH"
 fi
 
+PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
+
 #Custom modifications
 
-#capslock magic
-./Scripts/config/escCapslockSwitch.sh
-
 #Set ranger terminal information
-export TERMINAL=urxvtc
-export SHELL=/usr/bin/fish
-export TERMCMD=urxvtc
+export TERMINAL=urxvt
+export SHELL=/bin/bash
+export TERMCMD=urxvt
 export PAGER=less
-
-#gitdoge
-
-alias such=git
-alias much=git
-alias many=git
-alias very=git
-alias so=git
-alias wow='git status'
+export EDITOR=vim

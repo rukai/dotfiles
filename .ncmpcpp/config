@@ -10,7 +10,7 @@ color2 = "green"
 main_window_highlight_color = "red"
 progressbar_color = "white"
 statusbar_color = "white"
-active_column_color = "red"
+active_column_color = "yellow"
 visualizer_color = "cyan"
 
 # Lyrics

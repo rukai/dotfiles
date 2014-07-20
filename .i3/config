@@ -141,7 +141,6 @@ bar {
     position top
     status_command i3status | ~/.i3/i3bar/wrapper.py
     #status_command conky -c /home/rubic/.i3/i3bar/conky.rc
-    output VGA-0
     colors { # dark colors
         background #080808
         background #141514
@@ -174,29 +173,29 @@ bar {
 
 #Custom modifications
 workspace_auto_back_and_forth yes
-workspace "1: Web" output VGA-0
-workspace 2 output VGA-0
-workspace 3 output VGA-0
-workspace 4 output VGA-0
-workspace 5 output VGA-0
-
-workspace 10 output VGA-0
-workspace 9 output VGA-0
-workspace 8 output VGA-0
-workspace 7 output VGA-0
-workspace 6 output VGA-0
+#workspace "1: Web" output VGA-0
+#workspace 2 output VGA-0
+#workspace 3 output VGA-0
+#workspace 4 output VGA-0
+#workspace 5 output VGA-0
+#
+#workspace 10 output VGA-0
+#workspace 9 output VGA-0
+#workspace 8 output VGA-0
+#workspace 7 output VGA-0
+#workspace 6 output VGA-0
 
 #click
 bindsym $mod+Tab exec xdotool click 1
 
 #tudu
-bindsym $mod+t exec urxvtcd -e tudu
+bindsym $mod+t exec urxvt -e tudu
 
 #timetable
 bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetable.jpg
 
 #ranger
-bindsym $mod+Shift+Return exec urxvtcd -e ranger
+bindsym $mod+Shift+Return exec urxvt -e ranger
 
 #screenshots
 bindsym Print exec scrot /home/rubic/Pictures/screenshot.png 
@@ -207,22 +206,22 @@ bindsym $mod+grave exec i3lock -c 000000 -i /home/rubic/Pictures/Wallpapers/mini
 #bindsym $mod+grave exec i3lock -c 000000 -i /home/rubic/Pictures/Wallpapers/orionNebulaBetterRes.jpg -d
 
 #cmus startup
-bindsym $mod+u exec urxvtcd -e ncmpcpp
+bindsym $mod+u exec urxvt -e ncmpcpp
 
 #pianobar (pandora startup)
-bindsym $mod+Shift+u exec urxvtcd -e pianobar
+bindsym $mod+Shift+u exec urxvt -e pianobar
 
 #wicd network manager curses client
-bindsym $mod+n exec urxvtcd -e wicd-curses
+bindsym $mod+n exec urxvt -e wicd-curses
 
 #python interpreter
-bindsym $mod+Shift+p exec urxvtcd -e python3
+bindsym $mod+Shift+p exec urxvt -e python3
 
 #open weechat
-bindsym $mod+c exec urxvtcd -e weechat-curses
+bindsym $mod+c exec urxvt -e weechat-curses
 
 #modify i3 config
-bindsym $mod+Shift+C exec urxvtcd -e vim /home/rubic/.i3/config
+bindsym $mod+Shift+C exec urxvt -e vim /home/rubic/.i3/config
 
 #web browsing
 bindsym $mod+i exec firefox
@@ -237,8 +236,8 @@ bindsym $mod+o exec keepassx
 #bindsym XF86AudioMute exec /home/rubic/Scripts/Hacks/muteToggle.sh
 
 #volume pulse
-bindsym XF86AudioRaiseVolume exec ponymix increase 1
-bindsym XF86AudioLowerVolume exec ponymix decrease 1
+bindsym XF86AudioRaiseVolume exec ponymix increase 2
+bindsym XF86AudioLowerVolume exec ponymix decrease 2
 bindsym XF86AudioMute exec ponymix toggle
 
 #launch volume GUI
@@ -255,14 +254,14 @@ bindsym $mod+m move container to output right
 #bindsym XF86AudioPrev exec cmus-remote -r
 #bindsym XF86AudioNext exec cmus-remote -n
 
-#media keys for ncmpcpp
+#media keys for mpd
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioNext exec mpc next
 
 bindsym Shift+XF86AudioPlay exec mpc seek 00:00:00
-bindsym Shift+XF86AudioPrev exec mpc seek -00:00:10
-bindsym Shift+XF86AudioNext exec mpc seek +00:00:10
+bindsym Shift+XF86AudioPrev exec mpc seek -2%
+bindsym Shift+XF86AudioNext exec mpc seek +2%
 
 #toggles workspace screen
 bindsym $mod+Shift+X move workspace to output right
@@ -296,8 +295,7 @@ exec --no-startup-id /home/rubic/Scripts/config/escCapslockSwitch.sh
 #launch applications that need to run after a network connection is made
 exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
 
-# Redshift
-exec --no-startup-id redshift 
-
 # Optionally configure laptop
 exec /home/rubic/Scripts/config/laptop.sh
+
+bindsym $mod+b exec deluge

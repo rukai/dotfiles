@@ -104,6 +104,13 @@ def mpd():
         musicString += 'Inactive'
     return musicString
 
+def stackTodo():
+    item = subprocess.check_output(['st', 'quiet']).decode().strip()
+    if item:
+        return "ST: {}".format(item)
+    else:
+        return ""
+
 if __name__ == '__main__':
     # Skip the first line which contains the version header.
     print_line(read_line())
@@ -126,6 +133,9 @@ if __name__ == '__main__':
         if musicString:
             j.insert(0, {'full_text' : musicString, 'name' : 'music'})
 
+        todoString = stackTodo()
+        if todoString:
+            j.insert(0, {'full_text' : todoString, 'name' : 'todo'})
+
         # and echo back new encoded json
         print_line(prefix+json.dumps(j))
-

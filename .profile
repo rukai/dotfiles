@@ -21,20 +21,13 @@ if [ -d "$HOME/Bin" ] ; then
     PATH="$HOME/Bin:$PATH"
 fi
 
+PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
+
 #Custom modifications
 
 #Set ranger terminal information
-export TERMINAL=urxvtc
+export TERMINAL=urxvt
 export SHELL=/bin/bash
-export TERMCMD=urxvtc
+export TERMCMD=urxvt
 export PAGER=less
 export EDITOR=vim
-
-#gitdoge
-
-alias such=git
-alias much=git
-alias many=git
-alias very=git
-alias so=git
-alias wow='git status'

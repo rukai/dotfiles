@@ -49,8 +49,11 @@ ${exec lsb_release -rc | sed 's/^/  /'}
 #  ${texeci 7200 curl 192.168.1.7/running.txt}
 #  ${texeci 7200 curl 192.168.1.9/running.txt}
 ${color2}Agenda:
-${exec gcalcli --nocolor agenda "1am" "11pm"}
-# #TuDu List: ${exec ~/.i3/conky/getTuduPercent.sh}%
-# #${execbar ~/.i3/conky/getTuduPercent.sh}
+${exec gcalcli --nocolor agenda "1am" "11pm" | sed 's/^/  /'}
+TuDu List:
+  ${exec ~/.i3/conky/getTuduPercent.sh}%  ${execbar ~/.i3/conky/getTuduPercent.sh}
 # #Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
 # #${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
+
+'most bugs come down to setting or resetting a single bit'
+ TJ- the MBR hacker

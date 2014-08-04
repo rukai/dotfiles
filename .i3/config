@@ -80,7 +80,7 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace "1: Web"
+bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
@@ -92,7 +92,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace "1: Web"
+bindsym $mod+Shift+exclam move container to workspace 1
 bindsym $mod+Shift+at move container to workspace 2
 bindsym $mod+Shift+numbersign move container to workspace 3
 bindsym $mod+Shift+dollar move container to workspace 4
@@ -192,7 +192,8 @@ bindsym $mod+Tab exec xdotool click 1
 bindsym $mod+t exec urxvt -e tudu
 
 #timetable
-bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetable.jpg
+#bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/timetable.jpg
+bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/trialsTimetable.jpg
 
 #ranger
 bindsym $mod+Shift+Return exec urxvt -e ranger
@@ -267,7 +268,8 @@ bindsym Shift+XF86AudioNext exec mpc seek +2%
 bindsym $mod+Shift+X move workspace to output right
 
 #startup unclutter
-exec_always --no-startup-id unclutter -keystroke -idle 0.5 -root --noevents
+#exec_always --no-startup-id unclutter -keystroke -idle 0.5 -root --noevents
+#exec --no-startup-id unclutter -idle 3 -root #is killing i3 0.o
 
 #general startup via bash
 exec --no-startup-id /home/rubic/Scripts/config/i3Init.sh
@@ -282,7 +284,10 @@ for_window [title="Unlock\ Login\ Keyring"] floating disable
 
 #COLORS!!
 #window        #border #color  #text   #v/h hint
-client.focused #000000 #7d8876 #ffffff #b0a974
+#client.focused #000000 #7d8876 #ffffff #b0a974
+client.focused #000000 #f15c0a #ffffff #b0a974
+client.unfocused #000000 #5e5e5e #ffffff #b0a974
+client.focused_inactive #000000 #a6a6a6 #ffffff #b0a974
 
 hide_edge_borders both
 
@@ -299,3 +304,6 @@ exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
 exec /home/rubic/Scripts/config/laptop.sh
 
 bindsym $mod+b exec deluge
+
+#remove window title
+for_window [class="^.*"] border pixel none

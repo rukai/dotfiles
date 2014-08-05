@@ -18,3 +18,11 @@ external_editor = "urxvt -e vim"
 
 #Tag editor
 mpd_music_dir = "/home/rubic/Music/"
+
+# Visualizer
+visualizer_fifo_path = "/tmp/mpdVisualizer.fifo"
+visualizer_output_name = "visualizer"
+visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+#visualizer_type = "wave"
+visualizer_type = "spectrum"

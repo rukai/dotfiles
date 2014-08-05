@@ -103,3 +103,4 @@ urxvt.vim-scrollback.launcher.1: gvim +$2 $1
 ! configure the command used when opening urls. Note: uses the same
 ! configuration as the url launcher script shipped with urxvt.
 urxvt*urlLauncher: firefox
+urxvt*urgentOnBell: true

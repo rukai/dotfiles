@@ -31,3 +31,4 @@ export SHELL=/bin/bash
 export TERMCMD=urxvt
 export PAGER=less
 export EDITOR=vim
+alias alert="printf '\a'"

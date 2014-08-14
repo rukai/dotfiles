@@ -192,8 +192,7 @@ bindsym $mod+Tab exec xdotool click 1
 bindsym $mod+t exec urxvt -e tudu
 
 #timetable
-#bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/timetable.jpg
-bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/trialsTimetable.jpg
+bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/timetable.jpg
 
 #ranger
 bindsym $mod+Shift+Return exec urxvt -e ranger

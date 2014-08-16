@@ -1,4 +1,7 @@
 source /etc/vimrc
+
+execute pathogen#infect()
+
 "programming indentation
 filetype plugin indent on
 set tabstop=4
@@ -25,3 +28,5 @@ set showmatch
 set autoindent
 set background=dark
 syntax on
+
+colorscheme jellybeans

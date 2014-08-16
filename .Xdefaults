@@ -8,8 +8,9 @@ Xft.antialias: 0
 Xft.dpi: 72
 Xft.rgba: rgb
 
-urxvt*cursorBlink: true
-urxvt*cursorColor: #5C5C5C
+urxvt*cursorBlink: True
+urxvt*cursorUnderline: True
+urxvt*cursorColor: #FFFFFF
 urxvt*termName: xterm-256color
 urxvt*loginShell: true
 urxvt*scrollBar: false

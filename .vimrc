@@ -1,6 +1,8 @@
 source /etc/vimrc
 
+"pathogen stuff
 execute pathogen#infect()
+call pathogen#helptags()
 
 "programming indentation
 filetype plugin indent on
@@ -30,3 +32,10 @@ set background=dark
 syntax on
 
 colorscheme jellybeans
+
+"powerline
+set nocompatible
+set laststatus=2
+set encoding=utf-8
+set noshowmode
+"let g:Powerline_symbols = "foobar"

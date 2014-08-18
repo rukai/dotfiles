@@ -1,7 +1,7 @@
 from ranger.api.commands import *
 
-class renameCommand(Command):
-    """:renameCommand
+class renameConsole(Command):
+    """:renameConsole
 
     Creates an open_console for the rename command, automatically placing the cursor before the file extension.
     """

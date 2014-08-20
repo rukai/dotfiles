@@ -22,14 +22,15 @@ set sh=bash
 
 inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 
+"features
 set number
 set scrolloff=5
-"hi SpellBad guibg=#ff2929 ctermbg=88
 set title
 set showmatch
 set autoindent
 set background=dark
 syntax on
+autocmd BufNewFile,BufRead *.txt,*.md setlocal spell
 
 colorscheme jellybeans
 

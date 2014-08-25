@@ -11,3 +11,4 @@ alias ls='ls --color=auto'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias youtube-dl="youtube-dl -o '%(title)s.%(ext)s'"
 alias iftop="iftop -B"
+alias bitcoin="bitcoin-cli"

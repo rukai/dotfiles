@@ -56,5 +56,3 @@ ${exec gcalcli --nocolor agenda "1am" "11pm" | sed 's/^/  /'}
 #  ${exec ~/.i3/conky/getTuduPercent.sh}%  ${execbar ~/.i3/conky/getTuduPercent.sh}
 # #Project Euler: ${execi 7200 echo "`~/.i3/conky/grabEuler.sh`/`~/.i3/conky/numberOfChallenges.sh`"} solved
 # #${execibar 1800 echo " scale = 5 ; ( `~/.i3/conky/grabEuler.sh` / `~/.i3/conky/numberOfChallenges.sh` ) * 100" | bc}
-${color1}'most bugs come down to setting or resetting a single bit'
- TJ- the MBR hacker

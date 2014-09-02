@@ -1,2 +1,7 @@
 /.ncmpcpp/error.log
 /.i3/conky/tuduOutput.txt
+ranger/bookmarks
+ranger/history
+ranger/tagged
+.vim/.netrwhist
+ranger/__pycache__/

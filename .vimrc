@@ -1,4 +1,7 @@
-source /etc/vimrc
+if hostname() == "ARCHBOX"
+    source /etc/vimrc
+endif
+
 
 "pathogen stuff
 execute pathogen#infect()

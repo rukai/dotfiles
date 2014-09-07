@@ -33,7 +33,11 @@ set showmatch
 set autoindent
 set background=dark
 syntax on
-autocmd BufNewFile,BufRead *.txt,*.md setlocal spell
+
+"Spelling
+autocmd BufNewFile,BufRead *.md setlocal spell
+setlocal spellfile+=~/.vim/spell/en.utf-8.add
+setlocal spellfile+=.localSpell.utf-8.add
 
 colorscheme jellybeans
 

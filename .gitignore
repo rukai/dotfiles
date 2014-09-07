@@ -3,5 +3,6 @@
 ranger/bookmarks
 ranger/history
 ranger/tagged
-.vim/.netrwhist
 ranger/__pycache__/
+.vim/.netrwhist
+.vim/spell

@@ -189,7 +189,7 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Tab exec xdotool click 1
 
 #tudu
-bindsym $mod+t exec urxvt -e tudu
+bindsym $mod+t exec urxvt -e vim ~/.todo.txt
 
 #timetable
 bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/timetable.jpg

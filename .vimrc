@@ -47,3 +47,6 @@ set laststatus=2
 set encoding=utf-8
 set noshowmode
 "let g:Powerline_symbols = "foobar"
+
+"Esc mapping
+inoremap jj <esc>

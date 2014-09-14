@@ -13,7 +13,7 @@ then
     alias less=$PAGER
 fi
 
-set -o vi
+set -o emacs
 PS1='\u@\h \W\$ '
 
 alias ls='ls --color=auto'

@@ -191,9 +191,6 @@ bindsym $mod+Tab exec xdotool click 1
 #tudu
 bindsym $mod+t exec urxvt -e vim ~/.todo.txt
 
-#timetable
-bindsym $mod+Shift+t exec sxiv /home/rubic/Education/School/timetables/timetable.jpg
-
 #ranger
 bindsym $mod+Shift+Return exec urxvt -e ranger
 
@@ -295,7 +292,6 @@ hide_edge_borders both
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-exec --no-startup-id /home/rubic/Scripts/config/escCapslockSwitch.sh
 #launch applications that need to run after a network connection is made
 exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
 

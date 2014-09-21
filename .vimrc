@@ -36,6 +36,7 @@ syntax on
 
 "Spelling
 autocmd BufNewFile,BufRead *.md setlocal spell
+autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 setlocal spellfile+=~/.vim/spell/en.utf-8.add
 setlocal spellfile+=.localSpell.utf-8.add
 

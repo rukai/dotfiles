@@ -105,7 +105,8 @@ def mpd():
     return musicString
 
 def stackTodo():
-    item = subprocess.check_output(['st', 'quiet']).decode().strip()
+    scriptPath='/home/rubic/Scripts/noteKeeping/stackTodo.py'
+    item = subprocess.check_output([scriptPath, 'quiet']).decode().strip()
     if item:
         return "ST: {}".format(item)
     else:

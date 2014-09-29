@@ -230,7 +230,7 @@ bindsym $mod+o exec keepassx
 #volume alsa
 #bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-#bindsym XF86AudioMute exec /home/rubic/Scripts/Hacks/muteToggle.sh
+#bindsym XF86AudioMute exec /home/rubic/Scripts/fixes/muteToggle.sh
 
 #volume pulse
 bindsym XF86AudioRaiseVolume exec ponymix increase 2
@@ -241,7 +241,7 @@ bindsym XF86AudioMute exec ponymix toggle
 bindsym $mod+p exec pavucontrol
 
 #whitenoise
-#bindsym XF86AudioMute exec /home/rubic/Scripts/whitenoiseToggle.sh 
+#bindsym XF86AudioMute exec /home/rubic/Scripts/audio/whitenoiseToggle.sh 
 
 #move container to the chosen screen
 bindsym $mod+m move container to output right
@@ -293,7 +293,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 #launch applications that need to run after a network connection is made
-exec --no-startup-id /home/rubic/Scripts/i3/postNetLaunch.sh
+exec --no-startup-id /home/rubic/Scripts/config/postNetLaunch.sh
 
 # Optionally configure laptop
 exec /home/rubic/Scripts/config/laptop.sh

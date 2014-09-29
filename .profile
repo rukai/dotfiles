@@ -22,13 +22,3 @@ if [ -d "$HOME/Bin" ] ; then
 fi
 
 PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
-
-#Custom modifications
-
-#Set ranger terminal information
-export TERMINAL=urxvt
-export SHELL=/bin/bash
-export TERMCMD=urxvt
-export PAGER=less
-export EDITOR=vim
-alias alert="printf '\a'"

@@ -21,3 +21,9 @@ alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias youtube-dl="youtube-dl -o '%(title)s.%(ext)s'"
 alias iftop="iftop -B"
 alias bitcoin="bitcoin-cli"
+alias alert="printf '\a'"
+
+export TERMINAL=urxvt
+export SHELL=/bin/bash
+export TERMCMD=urxvt
+export EDITOR=vim

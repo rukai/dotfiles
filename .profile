@@ -22,3 +22,4 @@ if [ -d "$HOME/Bin" ] ; then
 fi
 
 PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
+export PYTHONPATH=/usr/lib/python2.7/site-packages

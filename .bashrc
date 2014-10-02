@@ -26,7 +26,7 @@ alias alert="printf '\a'"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 #Homemade scripts
-alias waitmusic=Scripts/audio/waitMusic.sh
+alias sleepmusic=Scripts/audio/waitMusic.sh
 alias st=Scripts/noteKeeping/stackTodo.py
 alias md=Scripts/documents/markdownCSS.sh
 alias dotwrap=Scripts/documents/dotWrapWrapper.sh

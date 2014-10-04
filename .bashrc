@@ -9,6 +9,7 @@
 if [ $(hostname) == "ARCHBOX" ]
 then
     source /usr/share/doc/pkgfile/command-not-found.bash
+    source /usr/share/git/completion/git-completion.bash
     export PAGER=vimpager
     alias less=$PAGER
 fi

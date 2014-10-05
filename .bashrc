@@ -27,16 +27,16 @@ alias alert="printf '\a'"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 #Homemade scripts
-alias sleepmusic=Scripts/audio/waitMusic.sh
-alias st=Scripts/noteKeeping/stackTodo.py
-alias md=Scripts/documents/markdownCSS.sh
-alias dotwrap=Scripts/documents/dotWrapWrapper.sh
-alias h4ck5=Scripts/rice/2spookey.lua
-alias push2laptop=Scripts/Sync/pull.sh
-alias pull2desktop=Scripts/Sync/push.sh
-alias wakebackup=Scripts/backup/wakeServer.sh
-alias backup=Scripts/backup/runBackup.sh
-alias esc=Scripts/config/escCapslockSwitch.sh
+alias sleepmusic=~/Scripts/audio/sleepMusic.sh
+alias st=~/Scripts/noteKeeping/stackTodo.py
+alias md=~/Scripts/documents/markdownCSS.sh
+alias dotwrap=~/Scripts/documents/dotWrapWrapper.sh
+alias h4ck5=~/Scripts/rice/2spookey.lua
+alias push2laptop=~/Scripts/Sync/pull.sh
+alias pull2desktop=~/Scripts/Sync/push.sh
+alias wakebackup=~/Scripts/backup/wakeServer.sh
+alias backup=~/Scripts/backup/runBackup.sh
+alias esc=~/Scripts/config/escCapslockSwitch.sh
 
 #Environment variables
 export TERMINAL=urxvt

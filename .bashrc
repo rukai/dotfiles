@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 
-if [ $(hostname) == "ARCHBOX" ]
+if [[ $(lsb_release -i) == "Distributor ID:	Arch" ]]
 then
     source /usr/share/doc/pkgfile/command-not-found.bash
     source /usr/share/git/completion/git-completion.bash

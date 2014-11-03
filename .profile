@@ -23,3 +23,9 @@ fi
 
 PATH="$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH"
 export PYTHONPATH=/usr/lib/python2.7/site-packages
+
+#arch only
+if [[ $(lsb_release -i) == "Distributor ID:	Arch" ]]
+then
+    [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
+fi

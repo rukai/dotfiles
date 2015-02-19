@@ -12,7 +12,7 @@ urxvt*cursorBlink: True
 urxvt*cursorUnderline: True
 urxvt*cursorColor: #FFFFFF
 urxvt*termName: xterm-256color
-urxvt*loginShell: true
+urxvt*loginShell: false
 urxvt*scrollBar: false
 urxvt*secondaryScroll: true
 urxvt*saveLines: 65535

@@ -37,6 +37,7 @@ syntax on
 "Spelling
 autocmd BufNewFile,BufRead *.md setlocal spell
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
+autocmd BufNewFile,BufRead *.pde set filetype=processing "Force processing over arduino
 setlocal spellfile+=~/.vim/spell/en.utf-8.add
 setlocal spellfile+=.localSpell.utf-8.add
 
@@ -50,4 +51,5 @@ set noshowmode
 "let g:Powerline_symbols = "foobar"
 
 "Esc mapping
-inoremap jj <esc>
+inoremap kj <esc>
+inoremap jk <esc>

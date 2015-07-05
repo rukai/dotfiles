@@ -2,7 +2,6 @@ if hostname() == "ARCHBOX"
     source /etc/vimrc
 endif
 
-
 "pathogen stuff
 execute pathogen#infect()
 call pathogen#helptags()
@@ -36,6 +35,7 @@ syntax on
 
 "Spelling
 autocmd BufNewFile,BufRead *.md setlocal spell
+autocmd BufNewFile,BufRead *.tex setlocal spell
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 autocmd BufNewFile,BufRead *.pde set filetype=processing "Force processing over arduino
 setlocal spellfile+=~/.vim/spell/en.utf-8.add
@@ -51,5 +51,12 @@ set noshowmode
 "let g:Powerline_symbols = "foobar"
 
 "Esc mapping
-inoremap kj <esc>
 inoremap jk <esc>
+
+"Latex
+let g:Tex_AutoFolding = 0
+
+"highlight current line
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>

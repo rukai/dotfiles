@@ -21,7 +21,8 @@ PS1='\u@\h \W\$ '
 
 #New defaults
 alias ls='ls --color=auto'
-alias youtube-dl="youtube-dl -o '%(title)s.%(ext)s'"
+alias ydl="youtube-dl -o '%(title)s.%(ext)s' -f best"
+alias yaudio="youtube-dl -o '%(title)s.%(ext)s' -x -f bestaudio"
 alias iftop="iftop -B"
 alias bitcoin="bitcoin-cli"
 alias pacman="pacmatic"
@@ -32,6 +33,7 @@ alias sudo="sudo "
 #New tools
 alias alert="printf '\a'"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias serve="python3 -m http.server"
 
 #Homemade scripts
 alias sleepmusic=~/Scripts/audio/sleepMusic.sh
@@ -44,3 +46,5 @@ alias pull2desktop=~/Scripts/Sync/push.sh
 alias wakebackup=~/Scripts/backup/wakeServer.sh
 alias backup=~/Scripts/backup/runBackup.sh
 alias esc=~/Scripts/config/escCapslockSwitch.sh
+alias mame="sdlmame -rompath \$PWD "
+alias wget="wget -c"

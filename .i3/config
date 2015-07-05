@@ -171,19 +171,6 @@ bar {
 #}
 
 
-#Custom modifications
-workspace_auto_back_and_forth yes
-#workspace "1: Web" output VGA-0
-#workspace 2 output VGA-0
-#workspace 3 output VGA-0
-#workspace 4 output VGA-0
-#workspace 5 output VGA-0
-#
-#workspace 10 output VGA-0
-#workspace 9 output VGA-0
-#workspace 8 output VGA-0
-#workspace 7 output VGA-0
-#workspace 6 output VGA-0
 
 #click
 bindsym $mod+Tab exec xdotool click 1
@@ -216,6 +203,9 @@ bindsym $mod+Shift+p exec urxvt -e python3
 
 #open weechat
 bindsym $mod+c exec urxvt -e weechat-curses
+
+#SUNVOX
+bindsym $mod+Shift+S exec sunvox
 
 #modify i3 config
 bindsym $mod+Shift+C exec urxvt -e vim /home/rubic/.i3/config
@@ -277,6 +267,10 @@ for_window [class="Steam" title="^Friends$"] floating disable
 
 #misc window floating
 for_window [title="Unlock\ Login\ Keyring"] floating disable
+for_window [title="Lethal League"] floating enable
+
+#Processing force tiling
+#for_window [class="processing-core-PApplet"] floating disable
 
 #COLORS!!
 #window        #border #color  #text   #v/h hint
@@ -284,11 +278,9 @@ for_window [title="Unlock\ Login\ Keyring"] floating disable
 client.focused #000000 #f15c0a #ffffff #b0a974
 client.unfocused #000000 #5e5e5e #ffffff #b0a974
 client.focused_inactive #000000 #a6a6a6 #ffffff #b0a974
-
 hide_edge_borders both
 
 # Scratchpad tests
-
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
@@ -298,7 +290,18 @@ exec --no-startup-id /home/rubic/Scripts/config/postNetLaunch.sh
 # Optionally configure laptop
 exec /home/rubic/Scripts/config/laptop.sh
 
-bindsym $mod+b exec deluge
+bindsym $mod+b exec bt
 
 #remove window title
 for_window [class="^.*"] border pixel none
+
+
+#quick layout swap
+bindsym $mod+z exec /home/rubic/Scripts/monitor/desktop/portrait.sh
+bindsym $mod+x exec /home/rubic/Scripts/monitor/desktop/landscape.sh
+
+# Gaps
+gaps inner 12
+smart_borders no_gaps
+bindsym $mod+y gaps inner current minus 6
+bindsym $mod+Shift+y gaps inner current plus 6
